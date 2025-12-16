@@ -107,7 +107,9 @@ namespace WinFormsArray
 
         private void btm_DisArrey_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"ในarreyนี้แถวที่ 1 มีสามาชิก {myArray[0].Length} ประกอบไปด้วย {string.Join(",", myArray[0])}\nในarreyนี้แถวที่ 2 มีสามาชิก {myArray[1].Length} ประกอบไปด้วย {string.Join(",", myArray[1])}\nในarreyนี้แถวที่ 3 มีสามาชิก {myArray[2].Length} ประกอบไปด้วย {string.Join(",", myArray[2])}");
+            MessageBox.Show($"ในarreyนี้แถวที่ 1 มีสามาชิก {myArray[0].Length} ประกอบไปด้วย {string.Join(",", myArray[0])}" +
+                $"\nในarreyนี้แถวที่ 2 มีสามาชิก {myArray[1].Length} ประกอบไปด้วย {string.Join(",", myArray[1])}" +
+                $"\nในarreyนี้แถวที่ 3 มีสามาชิก {myArray[2].Length} ประกอบไปด้วย {string.Join(",", myArray[2])}");
         }
     }
 }
