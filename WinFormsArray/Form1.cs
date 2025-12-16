@@ -90,7 +90,7 @@ namespace WinFormsArray
             int totalA = myArray[0].Sum();
             int totalB = myArray[1].Sum();
             int totalC = myArray[2].Sum();
-            tbxResult.Text = $"ผลรวมของแถวที่ 1 มี {totalA} "+Environment.NewLine+ "ผลรวมของแถวที่ 2 มี {totalB} "+Environment.NewLine+ "ผลรวมของแถวที่ 3 มี {totalC}"+Environment.NewLine+" ---end---";
+            tbxResult.Text = $"ผลรวมของแถวที่ 1 มี {totalA} "+Environment.NewLine+ $"ผลรวมของแถวที่ 2 มี {totalB} "+Environment.NewLine+ $"ผลรวมของแถวที่ 3 มี {totalC}"+Environment.NewLine+" ---end---";
         }
 
         private void ok_MouseHover(object sender, EventArgs e)
