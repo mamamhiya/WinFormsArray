@@ -87,12 +87,10 @@ namespace WinFormsArray
             };
         private void btnJagged_Click(object sender, EventArgs e)
         {
-            
-
             int totalA = myArray[0].Sum();
             int totalB = myArray[1].Sum();
             int totalC = myArray[2].Sum();
-            MessageBox.Show($"ผลรวมของแถวที่ 1 มี {totalA} \nผลรวมของแถวที่ 2 มี {totalB} \nผลรวมของแถวที่ 3 มี {totalC} ");
+            MessageBox.Show($"ผลรวมของแถวที่ 1 มี {totalA} \nผลรวมของแถวที่ 2 มี {totalB} \nผลรวมของแถวที่ 3 มี {totalC} \n ---end---");
         }
 
         private void ok_MouseHover(object sender, EventArgs e)
@@ -109,7 +107,8 @@ namespace WinFormsArray
         {
             MessageBox.Show($"ในarreyนี้แถวที่ 1 มีสามาชิก {myArray[0].Length} ประกอบไปด้วย {string.Join(",", myArray[0])}" +
                 $"\nในarreyนี้แถวที่ 2 มีสามาชิก {myArray[1].Length} ประกอบไปด้วย {string.Join(",", myArray[1])}" +
-                $"\nในarreyนี้แถวที่ 3 มีสามาชิก {myArray[2].Length} ประกอบไปด้วย {string.Join(",", myArray[2])}");
+                $"\nในarreyนี้แถวที่ 3 มีสามาชิก {myArray[2].Length} ประกอบไปด้วย {string.Join(",", myArray[2])} " +
+                $"\n ---end---");
         }
     }
 }
