@@ -1,6 +1,6 @@
 ﻿namespace WinFormsArray
 {
-    partial class Form1
+    partial class FrmArrey
     {
         /// <summary>
         ///  Required designer variable.
@@ -38,11 +38,14 @@
             lblmin = new Label();
             btnArray2d = new Button();
             tbxArray2d = new TextBox();
+            btnJagged = new Button();
+            btm_DisArrey = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(255, 255, 128);
             label1.Location = new Point(86, 86);
             label1.Margin = new Padding(6, 0, 6, 0);
             label1.Name = "label1";
@@ -62,7 +65,7 @@
             // 
             // ok
             // 
-            ok.Location = new Point(654, 243);
+            ok.Location = new Point(640, 186);
             ok.Margin = new Padding(6, 7, 6, 7);
             ok.Name = "ok";
             ok.Size = new Size(176, 71);
@@ -70,6 +73,8 @@
             ok.Text = "ประมวลผล";
             ok.UseVisualStyleBackColor = true;
             ok.Click += ok_Click;
+            ok.MouseClick += ok_MouseClick;
+            ok.MouseHover += ok_MouseHover;
             // 
             // lblnum
             // 
@@ -124,13 +129,15 @@
             // 
             // btnArray2d
             // 
-            btnArray2d.Location = new Point(633, 354);
+            btnArray2d.Location = new Point(619, 297);
             btnArray2d.Name = "btnArray2d";
             btnArray2d.Size = new Size(243, 67);
             btnArray2d.TabIndex = 10;
             btnArray2d.Text = "ทดสอบArray 2 มิติ";
             btnArray2d.UseVisualStyleBackColor = true;
             btnArray2d.Click += btnArray2d_Click;
+            btnArray2d.MouseClick += ok_MouseClick;
+            btnArray2d.MouseHover += ok_MouseHover;
             // 
             // tbxArray2d
             // 
@@ -140,12 +147,36 @@
             tbxArray2d.Size = new Size(708, 283);
             tbxArray2d.TabIndex = 11;
             // 
-            // Form1
+            // btnJagged
+            // 
+            btnJagged.Location = new Point(1407, 610);
+            btnJagged.Name = "btnJagged";
+            btnJagged.Size = new Size(243, 110);
+            btnJagged.TabIndex = 12;
+            btnJagged.Text = "แสดงผลรวมของ Jagged";
+            btnJagged.UseVisualStyleBackColor = true;
+            btnJagged.Click += btnJagged_Click;
+            btnJagged.MouseClick += ok_MouseClick;
+            btnJagged.MouseHover += ok_MouseHover;
+            // 
+            // btm_DisArrey
+            // 
+            btm_DisArrey.Location = new Point(1407, 455);
+            btm_DisArrey.Name = "btm_DisArrey";
+            btm_DisArrey.Size = new Size(243, 138);
+            btm_DisArrey.TabIndex = 13;
+            btm_DisArrey.Text = "แสดงArrey Jagged";
+            btm_DisArrey.UseVisualStyleBackColor = true;
+            btm_DisArrey.Click += btm_DisArrey_Click;
+            // 
+            // FrmArrey
             // 
             AutoScaleDimensions = new SizeF(15F, 49F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 224, 192);
             ClientSize = new Size(1852, 1055);
+            Controls.Add(btm_DisArrey);
+            Controls.Add(btnJagged);
             Controls.Add(tbxArray2d);
             Controls.Add(btnArray2d);
             Controls.Add(lblmin);
@@ -158,8 +189,8 @@
             Controls.Add(label1);
             Font = new Font("Chakra Petch", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(6, 7, 6, 7);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "FrmArrey";
+            Text = "FrmArrey";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -176,5 +207,7 @@
         private Label lblmin;
         private Button btnArray2d;
         private TextBox tbxArray2d;
+        private Button btnJagged;
+        private Button btm_DisArrey;
     }
 }

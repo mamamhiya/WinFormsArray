@@ -1,8 +1,8 @@
 namespace WinFormsArray
 {
-    public partial class Form1 : Form
+    public partial class FrmArrey : Form
     {
-        public Form1()
+        public FrmArrey()
         {
             InitializeComponent();
         }
@@ -36,7 +36,7 @@ namespace WinFormsArray
                     max = number[i];
 
                 }
-                
+
                 if (min > number[i])
                 {
                     min = number[i];
@@ -68,15 +68,46 @@ namespace WinFormsArray
             int row = data.GetLength(0);
             int col = data.GetLength(1);
             string result = "";
-            for (int i = 0;i< row; i++)
+            for (int i = 0; i < row; i++)
             {
                 result += "ข้อมูลที่ " + (i + 1) + " :";
-                result += "ชื่อจริง " + data[i , 0] + " :";
-                result += "ชื่อเล่น " + data[i ,1] + " :";
-                result += "จังหวัด " + data[i , 2] + Environment.NewLine;
+                result += "ชื่อจริง " + data[i, 0] + " :";
+                result += "ชื่อเล่น " + data[i, 1] + " :";
+                result += "จังหวัด " + data[i, 2] + Environment.NewLine;
 
             }
             tbxArray2d.Text = $"{result}";
+        }
+
+        int[][] myArray = new int[][]
+            {
+                new int[] {1,3,5,7,9},
+                new int[] {0,2,4,6},
+                new int[] {11,12}
+            };
+        private void btnJagged_Click(object sender, EventArgs e)
+        {
+            
+
+            int totalA = myArray[0].Sum();
+            int totalB = myArray[1].Sum();
+            int totalC = myArray[2].Sum();
+            MessageBox.Show($"ผลรวมของแถวที่ 1 มี {totalA} \nผลรวมของแถวที่ 2 มี {totalB} \nผลรวมของแถวที่ 3 มี {totalC} ");
+        }
+
+        private void ok_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ok_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void btm_DisArrey_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"ในarreyนี้แถวที่ 1 มีสามาชิก {myArray[0].Length} ประกอบไปด้วย {string.Join(",", myArray[0])}\nในarreyนี้แถวที่ 2 มีสามาชิก {myArray[1].Length} ประกอบไปด้วย {string.Join(",", myArray[1])}\nในarreyนี้แถวที่ 3 มีสามาชิก {myArray[2].Length} ประกอบไปด้วย {string.Join(",", myArray[2])}");
         }
     }
 }
