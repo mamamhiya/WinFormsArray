@@ -76,7 +76,7 @@ namespace WinFormsArray
                 result += "จังหวัด " + data[i, 2] + Environment.NewLine;
 
             }
-            tbxArray2d.Text = $"{result}";
+            tbxResult.Text = $"{result}";
         }
 
         int[][] myArray = new int[][]
@@ -90,7 +90,7 @@ namespace WinFormsArray
             int totalA = myArray[0].Sum();
             int totalB = myArray[1].Sum();
             int totalC = myArray[2].Sum();
-            MessageBox.Show($"ผลรวมของแถวที่ 1 มี {totalA} \nผลรวมของแถวที่ 2 มี {totalB} \nผลรวมของแถวที่ 3 มี {totalC} \n ---end---");
+            tbxResult.Text = $"ผลรวมของแถวที่ 1 มี {totalA} "+Environment.NewLine+ "ผลรวมของแถวที่ 2 มี {totalB} "+Environment.NewLine+ "ผลรวมของแถวที่ 3 มี {totalC}"+Environment.NewLine+" ---end---";
         }
 
         private void ok_MouseHover(object sender, EventArgs e)
@@ -105,10 +105,10 @@ namespace WinFormsArray
 
         private void btm_DisArrey_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"ในarreyนี้แถวที่ 1 มีสามาชิก {myArray[0].Length} ประกอบไปด้วย {string.Join(",", myArray[0])}" +
-                $"\nในarreyนี้แถวที่ 2 มีสามาชิก {myArray[1].Length} ประกอบไปด้วย {string.Join(",", myArray[1])}" +
-                $"\nในarreyนี้แถวที่ 3 มีสามาชิก {myArray[2].Length} ประกอบไปด้วย {string.Join(",", myArray[2])} " +
-                $"\n ---end---");
+            tbxResult.Text =$"ในarreyนี้แถวที่ 1 มีสามาชิก {myArray[0].Length} ประกอบไปด้วย {string.Join(",", myArray[0])}"+Environment.NewLine+ 
+                $"ในarreyนี้แถวที่ 2 มีสามาชิก {myArray[1].Length} ประกอบไปด้วย {string.Join(",", myArray[1])}" +Environment.NewLine+
+                $"ในarreyนี้แถวที่ 3 มีสามาชิก {myArray[2].Length} ประกอบไปด้วย {string.Join(",", myArray[2])} "+Environment.NewLine+
+                $"---end---";
         }
     }
 }

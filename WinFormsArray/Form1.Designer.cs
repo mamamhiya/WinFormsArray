@@ -37,7 +37,7 @@
             lblmax = new Label();
             lblmin = new Label();
             btnArray2d = new Button();
-            tbxArray2d = new TextBox();
+            tbxResult = new TextBox();
             btnJagged = new Button();
             btm_DisArrey = new Button();
             SuspendLayout();
@@ -129,7 +129,7 @@
             // 
             // btnArray2d
             // 
-            btnArray2d.Location = new Point(619, 297);
+            btnArray2d.Location = new Point(619, 267);
             btnArray2d.Name = "btnArray2d";
             btnArray2d.Size = new Size(243, 67);
             btnArray2d.TabIndex = 10;
@@ -139,17 +139,17 @@
             btnArray2d.MouseClick += ok_MouseClick;
             btnArray2d.MouseHover += ok_MouseHover;
             // 
-            // tbxArray2d
+            // tbxResult
             // 
-            tbxArray2d.Location = new Point(654, 610);
-            tbxArray2d.Multiline = true;
-            tbxArray2d.Name = "tbxArray2d";
-            tbxArray2d.Size = new Size(708, 283);
-            tbxArray2d.TabIndex = 11;
+            tbxResult.Location = new Point(619, 596);
+            tbxResult.Multiline = true;
+            tbxResult.Name = "tbxResult";
+            tbxResult.Size = new Size(708, 283);
+            tbxResult.TabIndex = 11;
             // 
             // btnJagged
             // 
-            btnJagged.Location = new Point(1407, 610);
+            btnJagged.Location = new Point(619, 460);
             btnJagged.Name = "btnJagged";
             btnJagged.Size = new Size(243, 110);
             btnJagged.TabIndex = 12;
@@ -161,9 +161,9 @@
             // 
             // btm_DisArrey
             // 
-            btm_DisArrey.Location = new Point(1407, 455);
+            btm_DisArrey.Location = new Point(619, 340);
             btm_DisArrey.Name = "btm_DisArrey";
-            btm_DisArrey.Size = new Size(243, 138);
+            btm_DisArrey.Size = new Size(243, 114);
             btm_DisArrey.TabIndex = 13;
             btm_DisArrey.Text = "แสดงArrey Jagged";
             btm_DisArrey.UseVisualStyleBackColor = true;
@@ -177,7 +177,7 @@
             ClientSize = new Size(1852, 1055);
             Controls.Add(btm_DisArrey);
             Controls.Add(btnJagged);
-            Controls.Add(tbxArray2d);
+            Controls.Add(tbxResult);
             Controls.Add(btnArray2d);
             Controls.Add(lblmin);
             Controls.Add(lblmax);
@@ -206,7 +206,7 @@
         private Label lblmax;
         private Label lblmin;
         private Button btnArray2d;
-        private TextBox tbxArray2d;
+        private TextBox tbxResult;
         private Button btnJagged;
         private Button btm_DisArrey;
     }
